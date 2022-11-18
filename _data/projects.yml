@@ -1,0 +1,110 @@
+- project:
+    print: True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    image: 
+      path: hd149026b_visualization.png
+    date: 07/2022 &ndash; Preparing paper
+    title: Using JWST NIRCAM to characterize emission spectrum for HD 149026b, a metalicity-rich exoplanet. 
+     
+    description: Me and collegues in U of Chicago are working on HD 149026b with data taken from JWST NIRCAM to characterize its atmosphere. I am heavily on the data reduction and analysis side, will try to do some modeling in my next project! 
+    
+
+- project:
+    print: True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    image: 
+      path: hatp14.png
+    date: 07/2022 Finished
+    title: Performing data reduction and analysis on JWST commissioning data(PID:1442) for practice purpose.
+    summary: 
+    description: <br>My first project in United States!</br>
+     In order to learn how JWST pipeline works and get a whole picture of exoplanet atmosphere characterization, I performed data reduction and analysis on HAT-P-14 and confirmed my results with STScI.
+    contents:
+        - title: Transmission spectrum
+          image:
+            path: hatp14_transmission.png
+           
+          description: <li>HAT-P-14b was selected for commissioning purpose for its weak atmospheric features and nearly flat spectrum due to high gravity. Also, it has high brightness and low stellar activity.</li>
+             <li>I used python based software called 'Eureka!' with some self-written scripts to do the data reduction and analysis</li>
+             <br> Citation-- 'Eureka!'(Bell et al., 2022, http://arxiv.org/abs/2207.03585)</br>
+
+
+
+- project:
+    print: True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    image: 
+      path: /nanhai/nanhai_cover.png
+    date: 12/2020 &ndash; Preparing paper
+    title: R&D on Site Exploration for a Neutrino Detector in South China Sea
+    summary: <h1 style="font-size:22px">The cover shows our neutrino detector on the deck before we down-passed it to the seafloor.</h1> 
+      <i><h2 style="font-size:16px">Image credits-- The TRIDENT collaboration</h2></i>
+    description: <br> A 1.5yr project on constructing a neutrino detector in South China Sea only open to honor-degree students with $12,000 research funding. </br> 
+      <br>I was in charge of the design and operation of a digital system to monitor the position and direction of detectors undersea with Python script. 
+      Besides, I employed my knowledge about Lambert surface, which I learned in an introductory course to galaxy, to help the PhD students in group model photon path and used what I learned in optics to calculate the refractive index for our system. 
+      Due to the commitment in developing stage, I was selected as one of the three undergraduates among 72 collaboration members to go aboard the scientific ship! I also joined data analysis and visualization. </br>
+    contents:
+        - title: Preliminary Research-- Instrument Assembling & Testing
+          image:
+            path: /nanhai/instrument.png
+           
+          description: The detectors were built up from scratch, including designing 3D models with Solid Works, gathering CCD and PMT(Photomultiplier Tubes) product information and ordering required devices. </br>
+            <br>The photo shows me assembling the PMT Dom(digital optical modules) and testing CCD in the lab. :))</br>
+            <br>Due to the miss of outsourcing firms, our detector encountered water-leak problems just one month before expected date to the sea. 
+            Me and collegues worked day and night, during which I was once sent to the emergency room because of back strain. 
+            Despite the toughness and unexpected issues, we still made it in the early September, 2021, to put our detector to the 3399m depth undersea. 
+            I would say the two months before aboard is really thrilling!!
+        
+        - title: Onboard data gathering and real-time analysis.
+          image: 
+            path: /nanhai/onboard.png
+          description: I was in charge of monitoring the temperature and humility of our detector using self-developed python software and circult board. 
+            Also, I was involing in the real-time data anlalysis to check the data quality.
+        - title: Onboard life!!
+          image:
+            path: /nanhai/life.png
+          description: <li> Me enjoying beer and BBQ! (No worry, in our country it's legal to drink at age 18.) </li>
+            <li>Me and my friend pretending Jack and Rose (Titanic).</li>
+            <li>The beautiful Milky Way seen from the deck.</li>
+            
+- project:
+    print: True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    image: 
+      path: tem_mapping.png
+    date: 07/2021 &ndash; ongoing
+    title: Brightness temperature mapping & data visualization for GJ1214b(JWST MIRI)
+    summary: Cover picture credit--Stevenson et al. (2014)
+    description: Me and postdoc in the group are working on the GJ1214b with data taken from JWST MIRI. I am helping with data visualization. Also, I am using dayside spectrum to map the atmosphere brightness temperature, with technique defined in Cowan & Agol (2008).</br>
+      <br>Citation </br>
+      Stevenson et al. (2014) arXiv:1410.2241 [astro-ph]</br>
+      Cowan & Agol (2008) https://iopscience.iop.org/article/10.1086/588553</br>
+
+- project:
+    print: True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    image: 
+      path: coffee.png
+    date: 03/2021 &ndash; 2022/10 Paper submitted
+    title: Machine learning implemented coffee maker
+    summary: A data science & chemistry cross-discipline research project 
+    description: In the second half of my second year, I was invited by a professor who lectured us Thermal and Statistical Physics to join a machine learning research program. The program needs certain background in chemistry, which I didn't learn any more since high school. 
+      But I managed to read through related papers and gave him a proposal talk within two weeks and became the team leader.
+      I also learned how to write basic machine learning scripts in Python. We patented out results and submitted a paper. It turns out even it's not the field I am in, I can pick up things quickly and apply them. 
+      SJTU requires freshman students in physics to have the same math classes as math major students, through which I was trained to learn things I am not familiar with in a short period, and also laid us a solid foundation in mathematics. 
+
+- project:
+    print: True
+       # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal: True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    date: 06/2021 &ndash; 06/2022
+    image: 
+      path: agatha.png
+    title: Disentangle Periodic Signals from Correlated Noise in Astronomical Events.
+    description: I used Agatha 2.0, a framework of periodograms(Feng F. et al, 2017,my research supervisor in SJTU) to disentangle periodic signals from correlated noise, study the controversial planetary systems and search for periodic signals in other astronomical events.
+          I also conducted optimization and refinement of Agatha for analyzing planetary periods, and studied the stability of Auto-Regressive-Moving-Average noise models for analyzing radial velocity data. </br>
+          <br>was about to preparing the paper but the whole-city lockdown due to COVID19 outbreak made it hard to continue. After which I left Shanghai and arrived at Uchicago. </br>
+
+
+
+
