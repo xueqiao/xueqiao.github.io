@@ -3814,10 +3814,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3964,10 +3964,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3985,10 +3985,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+		background-image: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -4014,6 +4014,23 @@ input, select, textarea {
 	left: 50%;
 	transform: translateX(-50%);
 	white-space: nowrap;
+	text-align: center;
+	line-height: 1.6;
+	top: 0.9em;
+}
+
+/* Background photo credit, second line under the design credit */
+#header .header-credit .photo-credit {
+	display: block;
+	text-transform: none;
+}
+
+@media screen and (max-width: 736px) {
+	#header .header-credit {
+		white-space: normal;
+		width: 70%;
+		line-height: 1.5;
+	}
 }
 
 /* Override banner centering — switch to left-aligned flex row */
@@ -4021,25 +4038,23 @@ input, select, textarea {
 	text-align: left;
 }
 
+/* Two equal columns, so the gap between name and photo sits at the page center */
 #banner .banner-inner-layout {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	align-items: center;
-	justify-content: center;
 	gap: 2em;
 	padding: 0 4em;
 	width: 100%;
 	max-width: 72em;
 	margin: 0 auto;
 	box-sizing: border-box;
-	justify-content: space-between;
 }
 
-/* Text block on the left */
+/* Text block on the left, hugging the center gap */
 #banner .banner-text {
-	flex: 0 1 auto;
+	justify-self: end;
 	text-align: right;
-	margin-left: 6.0em;
 }
 
 #banner .banner-text h2 {
@@ -4049,9 +4064,9 @@ input, select, textarea {
 
 /* Photo block on the right */
 #banner .banner-photo {
-	flex-shrink: 0;
-	width: 550px;
-	margin-left: auto;
+	justify-self: start;
+	width: 440px;
+	max-width: 100%;
 }
 
 /* Photo styling matching the template's border/decorative language:
@@ -4071,7 +4086,9 @@ input, select, textarea {
 /* Responsive: stack vertically on small screens */
 @media screen and (max-width: 736px) {
 	#banner .banner-inner-layout {
+		display: flex;
 		flex-direction: column;
+		align-items: center;
 		padding: 0 0em;
 		gap: 0em;
 		max-width: 72em; 
@@ -4080,14 +4097,20 @@ input, select, textarea {
 	#banner .banner-text {
 		text-align: center;
 		margin-left: 0;
+		width: 100%;
+		max-width: 100%;
 	}
 	#banner .banner-text h2 {
 		text-align: center;
 	}
+	#banner .banner-text p {
+		overflow-wrap: break-word;
+	}
 	#banner .banner-photo {
-    	flex-shrink: 0;
-    	width: 280px;
-   		margin-left: 20em；
+		flex-shrink: 0;
+		width: 224px;
+		max-width: 100%;
+		margin: 1.5em auto 0;
 	}
 }
 
@@ -4160,18 +4183,18 @@ input, select, textarea {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	background-color: #2e3842;
+	background-color: #000;
 	background-attachment: fixed;
-	background-image: url("../../images/banner.jpg");
+	background-image: url("../../images/banner.jpg?v=2");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-/* Dark overlay like the main banner */
+/* Dark overlay (black, was grey) */
 .section-banner:after {
 	content: '';
-	background: rgba(46, 56, 66, 0.6);
+	background: rgba(0, 0, 0, 0.6);
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -4370,4 +4393,184 @@ hr.outreach-divider.is-visible:after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* =============================================
+   INTRO ORDER: background first, then name
+   ============================================= */
+
+/* Dark cover over the banner fades out right away (was: 1.25s delay, 3s fade) */
+#banner:after {
+	transition: opacity 1.2s ease-in-out;
+	transition-delay: 0s;
+}
+
+/* Name zooms/fades in once the background is mostly visible */
+#banner h2 {
+	transition: transform 0.8s ease, opacity 0.8s ease;
+	transition-delay: 1s;
+}
+
+/* The lines above and below the name draw in after the name appears */
+#banner h2:before,
+#banner h2:after {
+	transition: width 0.85s ease;
+	transition-delay: 1.5s;
+}
+
+/* Step 3: the rest of the page fades in after the name
+   (title text, photo, header credits + menu, Learn More) */
+body.is-preload #banner .banner-text p,
+body.is-preload #banner .banner-photo,
+body.is-preload #header .header-credit,
+body.is-preload #header nav {
+	opacity: 0;
+}
+
+#banner .banner-text p,
+#banner .banner-photo,
+#header .header-credit,
+#header nav {
+	opacity: 1;
+	transition: opacity 1s ease;
+	transition-delay: 2.2s;
+}
+
+/* Bring text and photo above the dark cover so their fade is visible */
+#banner .banner-text p,
+#banner .banner-photo {
+	position: relative;
+	z-index: 1;
+}
+
+#banner .more {
+	transition-delay: 2.6s;
+}
+
+/* Keep the header credits at their usual softer brightness */
+#header .header-credit {
+	opacity: 0.6;
+}
+
+/* =============================================
+   ABOUT ME: text sits directly on the galaxy background
+   ============================================= */
+#about.wrapper.style3 {
+	background-color: transparent;
+	color: #fff;
+}
+
+/* Soft shadow keeps the text readable over bright stars */
+#about header.major h2,
+#about header.major p {
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Phones/tablets don't use the fixed page background, so give the section its own copy */
+body.is-mobile.landing #about.wrapper.style3 {
+	background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+	background-position: center center;
+	background-size: cover;
+}
+
+/* "About Me" heading: drop the short underline; full-width rules (below) frame it instead */
+#about header.major h2 {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Lines above and below "About Me", same width and color as the nav table border */
+#about hr.about-rule {
+	border: 0;
+	border-top: 2px solid rgba(255,255,255,0.6);
+	width: 100%;
+	max-width: 900px;
+	margin: 1em auto;
+}
+
+/* Less space between the banner and About Me (was 6em, 4em/3em on smaller screens) */
+#about.wrapper.style3 {
+	padding-top: 2em;
+}
+
+/* =============================================
+   HEADER BAR + NAV TABLE BACKGROUNDS
+   ============================================= */
+
+/* Top bar (shown after scrolling down): black instead of grey */
+#header {
+	background: #000;
+}
+#header.alt {
+	background: transparent;
+}
+
+/* Remove the dotted link underline inside the table (it doubled the bottom border) */
+.site-nav-table .nav-table-item {
+	border-bottom: none;
+}
+@media screen and (max-width: 736px) {
+	/* Stacked on phones: keep the thin separator between rows */
+	.site-nav-table .nav-table-item {
+		border-bottom: 1px solid rgba(255,255,255,0.25);
+	}
+	.site-nav-table .nav-table-item:last-child {
+		border-bottom: none;
+	}
+}
+
+/* =============================================
+   ABOUT ME = exactly one screen (minus the 3em top bar)
+   so jumping here shows About + table, with Research just out of view
+   ============================================= */
+#about.wrapper.style3 {
+	min-height: calc(100vh - 3em);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+#about > .inner {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Gap between the About text and the table (table now lives inside About) */
+#about .site-nav-table {
+	margin-top: 2.5em;
+}
+
+/* =============================================
+   RESEARCH / OUTREACH
+   Title bars: solid black. Paragraph sections: transparent over the galaxy background.
+   ============================================= */
+.section-banner {
+	background: #000;
+}
+.section-banner:after {
+	display: none;
+}
+
+#research-content.wrapper,
+#research-content .spotlight,
+#outreach-content.wrapper {
+	background-color: transparent;
+}
+
+/* Soft shadow keeps the paragraphs readable over bright stars */
+#research-content .spotlight .content,
+#outreach-content .outreach-text {
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Phones/tablets don't use the fixed page background, so give these sections their own copy */
+body.is-mobile.landing #research-content.wrapper,
+body.is-mobile.landing #outreach-content.wrapper {
+	background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../images/banner.jpg?v=2");
+	background-position: center center;
+	background-size: cover;
 }

@@ -21,12 +21,22 @@
 			xsmall:   [ null,      '480px'  ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+	// Play initial animations as soon as the banner background has loaded
+	// (instead of waiting for every image on the page). Window load is a fallback.
+		var introStarted = false,
+			startIntro = function() {
+				if (introStarted) return;
+				introStarted = true;
+				window.setTimeout(function() {
+					$body.removeClass('is-preload');
+				}, 100);
+			},
+			bannerImage = new Image();
+
+		bannerImage.onload = startIntro;
+		bannerImage.onerror = startIntro;
+		bannerImage.src = 'images/banner.jpg?v=2';
+		$window.on('load', startIntro);
 
 	// Mobile?
 		if (browser.mobile)
